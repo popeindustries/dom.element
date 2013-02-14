@@ -1,0 +1,21 @@
+{
+	"name": "dom.element",
+	"description": "An abstract DOM element object",
+	"version": "0.0.1",
+	"author": "popeindustries <alex@pope-industries.com>",
+	"dependencies": {
+		"util.object": "git://github.com/popeindustries/util.object.git",
+		"util.number": "git://github.com/popeindustries/util.number.git",
+		"util.animate": "git://github.com/popeindustries/util.animate.git",
+		"dom.css": "git://github.com/popeindustries/dom.css.git",
+		"dom.classlist": "git://github.com/popeindustries/dom.classlist.git",
+		"dom.select": "git://github.com/popeindustries/dom.select.git",
+		"dom.text": "git://github.com/popeindustries/dom.text.git",
+		"events.event": "git://github.com/popeindustries/events.event.git"
+	},
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/popeindustries/dom.element.git"
+	}
+}
