@@ -161,7 +161,7 @@ Element.prototype.getOffset = function() {
  */
 Element.prototype.getPosition = function() {
 	var top = this.domElement.offsetTop
-		, left = this.domElement.offsetLeft;
+		, left = this.domElement.offsetLeft
 		, el;
 	if ((el = this.domElement).offsetParent) {
 		while ((el = el.offsetParent)) {
