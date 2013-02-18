@@ -1,7 +1,7 @@
 {
 	"name": "dom.element",
 	"description": "An abstract DOM element object",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "popeindustries <alex@pope-industries.com>",
 	"dependencies": {
 		"util.object": "git://github.com/popeindustries/util.object.git",
