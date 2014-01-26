@@ -5,7 +5,7 @@ var classList = require('dom.classlist')
 	, text = require('dom.text')
 	, css = require('dom.css')
 	, event = require('events.event')
-	, objectUtils = require('util.object')
+	, identify = require('util.identify')
 	, numberUtils = require('util.number')
 	, animate = require('util.animate')
 	, win = window
@@ -43,19 +43,19 @@ module.exports = function(selector, context, tag) {
 	var element, results;
 	if (context == null) context = doc;
 	// Retrieve dom element(s) if passed a selector string
-	if (objectUtils.isString(selector)) {
+	if (identify.isString(selector)) {
 		selector = select(selector, context, tag);
 	// Error if not passed dom element or array
-	} else if (!(objectUtils.isElement(selector) || objectUtils.isArray(selector))) {
+	} else if (!(identify.isElement(selector) || identify.isArray(selector))) {
 		return null;
 	}
 
 	// Return array of Elements
-	if (objectUtils.isArray(selector)) {
+	if (identify.isArray(selector)) {
 		results = [];
 		for (var i = 0, n = selector.length; i < n; i++) {
 			element = selector[i];
-			if (objectUtils.isElement(element)) {
+			if (identify.isElement(element)) {
 				results.push(elementFactory(element));
 			}
 		}
