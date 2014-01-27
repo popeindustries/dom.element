@@ -4,7 +4,7 @@
 	"version": "0.0.2",
 	"author": "popeindustries <alex@pope-industries.com>",
 	"dependencies": {
-		"util.object": "git://github.com/thomaslein/util.identify.git",
+		"util.identify": "git://github.com/thomaslein/util.identify.git",
 		"util.number": "git://github.com/thomaslein/util.number.git",
 		"util.animate": "git://github.com/thomaslein/util.animate.git",
 		"dom.css": "git://github.com/thomaslein/dom.css.git",
