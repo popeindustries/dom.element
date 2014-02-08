@@ -7,7 +7,7 @@
 		"util.identify": "git://github.com/thomaslein/util.identify.git",
 		"util.number": "git://github.com/thomaslein/util.number.git",
 		"util.animate": "git://github.com/thomaslein/util.animate.git",
-		"dom.css": "git://github.com/thomaslein/dom.css.git",
+		"dom.style": "git://github.com/thomaslein/dom.style.git",
 		"dom.classlist": "git://github.com/thomaslein/dom.classlist.git",
 		"dom.select": "git://github.com/thomaslein/dom.select.git",
 		"dom.text": "git://github.com/thomaslein/dom.text.git",
