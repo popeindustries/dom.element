@@ -3,7 +3,7 @@
 var classList = require('dom.classlist')
 	, select = require('dom.select')
 	, text = require('dom.text')
-	, css = require('dom.css')
+	, css = require('dom.style')
 	, event = require('events.event')
 	, identify = require('util.identify')
 	, numberUtils = require('util.number')
