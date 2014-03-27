@@ -1,5 +1,3 @@
-// var Element, animate, classList, css, doc, elementFactory, elements, event, id, numberUtils, objectUtils, select, text, win;
-
 var classList = require('dom.classlist')
 	, select = require('dom.select')
 	, text = require('dom.text')
