@@ -293,7 +293,7 @@ Element.prototype.clearStyle = function(property) {
  * @see event.on
  */
 Element.prototype.on = function(type, callback, data) {
-	event.on(this, type, callback, data);
+	event.on(this.domElement, type, callback, data);
 	return this;
 };
 
@@ -301,7 +301,7 @@ Element.prototype.on = function(type, callback, data) {
  * @see event.off
  */
 Element.prototype.off = function(type, callback) {
-	event.off(this, type, callback);
+	event.off(this.domElement, type, callback);
 	return this;
 };
 
@@ -309,7 +309,7 @@ Element.prototype.off = function(type, callback) {
  * @see event.one
  */
 Element.prototype.one = function(type, callback, data) {
-	event.one(this, type, callback, data);
+	event.one(this.domElement, type, callback, data);
 	return this;
 };
 
