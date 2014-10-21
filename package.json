@@ -10,7 +10,7 @@
 		"dom.style": "git://github.com/thomaslein/dom.style.git#0.0.2",
 		"dom.classlist": "git://github.com/thomaslein/dom.classlist.git#0.0.2",
 		"dom.select": "git://github.com/thomaslein/dom.select.git#0.0.2",
-		"dom.text": "git://github.com/thomaslein/dom.text.git#0.0,2",
+		"dom.text": "git://github.com/thomaslein/dom.text.git#0.0.2",
 		"events.event": "git://github.com/thomaslein/events.event.git#0.0.2"
 	},
 	"main": "index.js",
