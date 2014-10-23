@@ -105,7 +105,7 @@ Element.prototype.setWidth = function(value) {
  * Retrieve height
  * @returns {Number}
  */
-Element.prototype.getWidth = function() {
+Element.prototype.getHeight = function() {
 	return this.domElement.offsetHeight;
 };
 
