@@ -105,7 +105,7 @@ Element.prototype.setWidth = function(value) {
  * Retrieve height
  * @returns {Number}
  */
-Element.prototype.getWidth = function() {
+Element.prototype.getHeight = function() {
 	return this.domElement.offsetHeight;
 };
 
@@ -113,7 +113,7 @@ Element.prototype.getWidth = function() {
  * Set height
  * @param {Number} value
  */
-Element.prototype.height = function(value) {
+Element.prototype.setHeight = function(value) {
 	if (value != null) {
 		this.setStyle('height', value);
 		if (this.domElement.height != null) {
@@ -448,6 +448,51 @@ Element.prototype.insertBefore = function(element, referenceElement) {
 Element.prototype.clone = function(deep, asElement) {
 	if (asElement == null) asElement = true;
 	return asElement ? new Element(this.domElement.clone(deep)) : this.domElement.clone(deep);
+};
+
+
+/**
+ * Wrap 'element'
+ * @param {DOMElement or Element} element
+ */
+Element.prototype.wrap = function(elms) {
+  if (!elms.length) elms = [elms];
+  for (var i = elms.length - 1; i >= 0; i--) {
+    var child = (i > 0) ? this.domElement.cloneNode(true) : this.domElement;
+    var el = elms[i];
+    var parent  = el.domElement.parentNode;
+    var sibling = el.domElement.nextSibling;
+
+    child.appendChild(el.domElement);
+
+    if (sibling) {
+        parent.insertBefore(child, sibling);
+    } else {
+        parent.appendChild(child);
+    }
+  }
+};
+
+/**
+ * Wrap all 'elements'
+ * @param {DOMElement or Element} element
+ */
+Element.prototype.wrapAll = function(elms) {
+  var el = elms.length ? elms[0] : elms;
+  var parent  = el.domElement.parentNode;
+  var sibling = el.domElement.nextSibling;
+
+  this.domElement.appendChild(el.domElement);
+
+  while (elms.length) {
+      this.domElemnt.appendChild(elms[0]);
+  }
+  
+  if (sibling) {
+      parent.insertBefore(this.domElement, sibling);
+  } else {
+      parent.appendChild(this.domElement);
+  }
 };
 
 /**
