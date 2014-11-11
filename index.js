@@ -459,10 +459,10 @@ Element.prototype.wrap = function(element) {
   for (var i = element.length - 1; i >= 0; i--) {
     var child = (i > 0) ? this.domElement.cloneNode(true) : this.domElement;
     var el = element[i];
-    var parent  = el.parentNode || el.domElement.parentNode
-    var sibling = el.nextSibling || el.domElement.nextSibling;
+    var parent  = (el.domElement) ? el.domElement.parentNode : el.parentNode
+    var sibling = (el.domElement) ? el.domElement.nextSibling : el.nextSibling
 
-    child.appendChild(el || el.domElement);
+    child.appendChild(el.domElement || el);
 
     if(sibling) {
     	parent.insertBefore(child, sibling);
@@ -478,13 +478,13 @@ Element.prototype.wrap = function(element) {
  */
 Element.prototype.wrapAll = function(element) {
   var el = element.length ? element[0] : element;
-  var parent  = el.parentNode || el.domElement.parentNode
-  var sibling = el.nextSibling || el.domElement.nextSibling;
-
-  this.appendChild(el || el.domElement);
+  var parent  = (el.domElement) ? el.domElement.parentNode : el.parentNode
+  var sibling = (el.domElement) ? el.domElement.nextSibling : el.nextSibling
+  console.log(this)
+  this.appendChild(el.domElement || el);
 
   while (element.length) {
-  	this.domElemnt.appendChild(elms[0]);
+  	this.domElement.appendChild(elms[0]);
   }
 
   if(sibling) {
@@ -493,7 +493,6 @@ Element.prototype.wrapAll = function(element) {
   	parent.appendChild(this.domElement);
   }
 };
-
 
 /**
  * Destroy element and optionally remove from parent
