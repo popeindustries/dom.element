@@ -451,6 +451,38 @@ Element.prototype.clone = function(deep, asElement) {
 };
 
 /**
+ * Insert HTML before the element itself
+ * @param {String} value
+ */
+Element.prototype.before = function(value) {
+	return this.domElement.insertAdjacentHTML('beforebegin', value);
+};
+
+/**
+ * Insert HTML after the element itself
+ * @param {String} value
+ */
+Element.prototype.after = function(value) {
+	return this.domElement.insertAdjacentHTML('afterend', value);
+};
+
+/**
+ * Insert HTML just inside the element, before its first child
+ * @param {String} value
+ */
+Element.prototype.prepend = function(value) {
+	return this.domElement.insertAdjacentHTML('afterbegin', value);
+};
+
+/**
+ * Insert HTML just inside the element, after its last child
+ * @param {String} value
+ */
+Element.prototype.append = function(value) {
+	return this.domElement.insertAdjacentHTML('beforeend', value);
+};
+
+/**
  * Wrap 'element'
  * @param {DOMElement or Element} element
  */
