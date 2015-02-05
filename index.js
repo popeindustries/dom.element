@@ -332,11 +332,17 @@ Element.prototype.getAttribute = function(type) {
 
 /**
  * Set attribute
- * @param {String} type
+ * @param {String} or {Object} type
  * @param {String} value
  */
 Element.prototype.setAttribute = function(type, value) {
-	this.domElement.setAttribute(type, value);
+	if(identify.isObject(type)){
+		for(var key in type) {
+    	this.domElement.setAttribute(key, type[key]);
+  	}
+	}else if(identify.isString(type)){
+		this.domElement.setAttribute(type, value);
+	}
 	return this;
 };
 
