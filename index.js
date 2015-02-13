@@ -518,7 +518,6 @@ Element.prototype.wrapAll = function(element) {
   var el = element.length ? element[0] : element;
   var parent  = (el.domElement) ? el.domElement.parentNode : el.parentNode
   var sibling = (el.domElement) ? el.domElement.nextSibling : el.nextSibling
-  console.log(this)
   this.appendChild(el.domElement || el);
 
   while (element.length) {
