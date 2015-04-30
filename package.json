@@ -6,7 +6,7 @@
 	"dependencies": {
 		"util.identify": "git://github.com/thomaslein/util.identify.git#0.0.2",
 		"util.number": "git://github.com/thomaslein/util.number.git#0.0.2",
-		"util.animate": "git://github.com/thomaslein/util.animate.git#0.2.0",
+		"util.animate": "git://github.com/thomaslein/util.animate.git#0.3.0",
 		"dom.style": "git://github.com/thomaslein/dom.style.git#0.2.0",
 		"dom.classlist": "git://github.com/thomaslein/dom.classlist.git#0.0.2",
 		"dom.select": "git://github.com/thomaslein/dom.select.git#0.1.0",
