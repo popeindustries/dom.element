@@ -554,7 +554,7 @@ Element.prototype.destroy = function(remove) {
 	this.domElement = null;
 	// Remove from cache
 	for (var i = 0, n = elements.length; i < n; i++) {
-		if (elements[idx] === this) {
+		if (elements[i] === this) {
 			elements.splice(i, 1);
 		}
 		break;
