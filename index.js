@@ -370,19 +370,30 @@ Element.prototype.parent = function(asElement) {
  * @param {Boolean} asElement
  * @returns {Array}
  */
-Element.prototype.children = function(asElement) {
+Element.prototype.children = function(asElement, skipNode) {
 	var nodes = this.domElement.childNodes
 		, results = []
 		, child;
 	if (asElement == null) asElement = true;
 	for (var i = 0, n = nodes.length; i < n; i++) {
 		child = nodes[i];
-		if (child && child.nodeType === 1) {
+		if (child && child.nodeType === 1 && child !== skipNode) {
 			results.push(asElement ? new Element(child) : child);
 		}
 	}
 	return results;
 };
+
+/**
+ * Retrieve siblings
+ * @param {Boolean} asElement
+ * @returns {Array}
+ */
+Element.prototype.siblings = function(asElement) {
+	var parent = this.parent()
+	if (asElement == null) asElement = true;
+	return parent.children(asElement, this.domElement);
+}
 
 /**
  * Retrieve first child
